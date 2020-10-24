@@ -1,13 +1,14 @@
 body{
   background-color: black;
+  background-image: url(HackTX2020/Field.jpg);
 }
 
 h1{
 text-align: center;
-color: white;
+color: rgb(41, 168, 54);
 }
 
 p{
 text-align: center;
-color: white;
+color: rgb(88, 226, 102);
 }
