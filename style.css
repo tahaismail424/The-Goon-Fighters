@@ -8,6 +8,36 @@ text-align: center;
 color: rgb(41, 168, 54);
 }
 
+.compass {
+  height: 25px;
+  width: 75px;
+  margin: 10px;
+}
+
+#west {
+
+  margin-left: -40px;
+
+}
+
+#east {
+  
+
+}
+
+#north {
+
+}
+
+#south {
+
+}
+.compassholder {
+  margin-top: 450px;
+  margin-left: 480px;
+
+}
+
 p{
 text-align: center;
 color: rgb(88, 226, 102);
