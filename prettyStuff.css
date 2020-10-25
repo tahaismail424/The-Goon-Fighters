@@ -60,3 +60,13 @@ p{
 text-align: center;
 color: rgb(00, 00, 00);
 }
+
+input{
+  margin: auto;
+  display: block;
+}
+
+.game{
+  text-align: center;
+  display: none;
+}

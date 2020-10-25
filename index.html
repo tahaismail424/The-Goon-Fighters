@@ -6,13 +6,19 @@
       
       <script>
 
-      my_function = null;
+      background_switch = null;
+      hideGame = null;
+      showGame = null;
+      hideMove = null;
+      showMove = null;
       $(document).ready(function(){
       var header = $('body');
-      
+      var gamesegment = $('.game');
+      var movesegment = $('.compassholder');
+
       var backgrounds = new Array(
           'url(fields.jpg)'
-        , 'url(forest.png)'
+        , 'url(forest.jpg)'
         , 'url(mountain.jpg)'
       );
       
@@ -24,8 +30,28 @@
           header.css('background-image', backgrounds[i]);
       }
       //setInterval(nextBackground, 1000);
-      my_function = nextBackground;
+      background_switch = nextBackground;
       
+      function hideGameSection(){
+          gamesegment.css('display', "none");
+      }
+      hideGame = hideGameSection;
+
+      function showGameSection(){
+          gamesegment.css('display', "block");
+      }
+      showGame = showGameSection;
+
+      function hideMoveSection(){
+          movesegment.css('display', "none");
+      }
+      hideMove = hideMoveSection;
+
+      function showMoveSection(){
+          movesegment.css('display', "block");
+      }
+      showMove = showMoveSection;
+
       header.css('background-image', backgrounds[0]);
       });
       </script>
@@ -37,14 +63,34 @@
     <div class="banner">
     <h1>  Welcome to the Wilderness </h1>
     <p>  You woke up in the middle of a mysterious field, your goal is to get out.  </p>
+
+    <div class="game">
+      <h1> Combat </h1>
+      <p id = "enemyhealth">
+        Enemy Health:
+      </p>
+      <p id = "playerhealth">
+        Player Health:
+      </p>
+      <p id = "question"> 
+        Question: 
+      </p>
+      <input id = "answer" class="input"><br>
+      <button id = "submit" class="compass"onclick="submit()">Submit</button>
+      <p id = "damagedealt">
+        Damage Dealt: 
+      </p>
+      <p id = "timetaken">
+        Time Taken:
+      </p>
+    </div>
+    
     <div class="compassholder">
       <button id="north"class="compass"onclick="northButtonClick()">North</button><br>
       <button id="west" class="compass"onclick="westButtonClick()">West</button>
       <button id="east" class="compass"onclick="eastButtonClick()">East</button><br>
       <button id="south"class="compass"onclick="southButtonClick()">South</button>
-
-    <div class="game">
-      
+    </div>
     
     <div class="leave">
       <button id="quit" class="compass"onclick="quit()">Quit</button>
@@ -54,7 +100,6 @@
     
     </div>
 
-
-  </body>
   <script src="TheGoonFighters.js"></script>
+  </body>
 </html>
