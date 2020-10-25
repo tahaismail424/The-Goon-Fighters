@@ -1,17 +1,19 @@
 body{
   background-color: black;
   background-image: url(HackTX2020/Field.jpg);
+  font-family:Georgia;
 }
 
 h1{
 text-align: center;
-color: rgb(41, 168, 54);
+color: rgb(27, 165, 41);
 }
 
 .compass {
   height: 25px;
   width: 75px;
   margin: 10px;
+  font-family:Georgia;
 }
 
 #west {
@@ -40,5 +42,5 @@ color: rgb(41, 168, 54);
 
 p{
 text-align: center;
-color: rgb(88, 226, 102);
+color: rgb(27, 165, 41);
 }
