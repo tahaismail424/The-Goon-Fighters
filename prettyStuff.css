@@ -51,6 +51,11 @@ color: rgb(00, 00, 00);
 
 }
 
+.leave{
+  margin-bottom: 0px;
+  margin-right: 0px;
+}
+
 p{
 text-align: center;
 color: rgb(00, 00, 00);
