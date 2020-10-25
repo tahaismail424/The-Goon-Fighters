@@ -3,11 +3,15 @@ class MathEnemy {
 	private String name;
 	private int health;
 	private int function;
+	private int pow;
+	private int time;
 	
-	public MathEnemy(String n, int h, int f) {
+	public MathEnemy(String n, int h, int f, int p, int t) {
 		name = n;
 		health = h;
 		function = f;
+		pow = p;
+		time = t;
 	}
 	
 	public Problem derivative() {
@@ -193,7 +197,7 @@ class MathEnemy {
 		int terms = (int)Math.ceil(Math.random() * 4) + 1;
 		for(int i = 0; i < terms - 1; i++) {
 			int operator = (int) Math.ceil(Math.random() * 10);
-			int operation = (int)Math.ceil(Math.random() * 2);
+			int operation = (int) Math.ceil(Math.random() * 2);
 			if(operation == 1) {
 				answer += operator;
 				question = question + " + " + operator;
@@ -215,7 +219,6 @@ class MathEnemy {
 		} else {
 			q = derivative();
 		}
-		System.out.println(q.getQ());
 		return q;
 	}
 	
@@ -230,5 +233,11 @@ class MathEnemy {
 	}
 	public void hit(int dmg) {
 		health -= dmg;
+	}
+	public int getPow() {
+		return pow;
+	}
+	public int getTime() {
+		return time;
 	}
 }
