@@ -351,15 +351,18 @@ function combat(){
     troll.reset();
     if(scene == 0){
         enemy = sprite;
-        alert("It's a sprite!");
+		alert("Suddenly, you hear a tinkling, malicious laugh. A glitter light coalesces in front of you, " + 
+		 "forming a wicked sprite. They move to attack, and you get ready to fight back.");
     }
     if(scene == 1){
         enemy = witch;
-        alert("It's a witch!");
+		alert("Suddenly, you hear a cackling voice. Emerging from the darkness is an old crone. " + 
+		"The witch readies her potions, in position to confront you. You prepare yourself to fight back.");
     }
     if(scene == 2){
         enemy = troll;
-        alert("It's a troll!");
+		alert("Suddenly, you hear an angry grunt, and look up to see a troll looming over you. " + 
+		"He raises his spiked bat, and you know you have a fight ahead of you, but you’ve come this far and you’re not going back.");
     }
     let enemyhealthfield = document.getElementById("enemyhealth");
     enemyhealthfield.innerHTML = "Enemy Health: " + enemy.getHealth();
