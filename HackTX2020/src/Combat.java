@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Combat {
 	public static void main(String [] args) {
 		Scanner scan = new Scanner(System.in);
-		MathEnemy e = new MathEnemy("Test", 1000, 3);
+		MathEnemy e = new MathEnemy("Test", 1000, 2, 100, 10);
 		Player p = new Player(500);
 		while(e.getHealth() > 0 && p.getHealth() > 0) {
 			long start = System.currentTimeMillis();
@@ -15,7 +15,7 @@ public class Combat {
 				if(t > 10) {
 					System.out.println("You took too long to answer, but you got the question right!");
 				} else {
-					e.hit(300 - ((int) Math.ceil(t * 10)));
+					e.hit(300 - ((int) Math.ceil(t * 30)));
 				}
 			} else {
 				System.out.println(ans + "	" + prob.getA());
