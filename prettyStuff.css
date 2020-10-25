@@ -1,12 +1,23 @@
 body{
   background-color: black;
-  background-image: url(HackTX2020/Field.jpg);
+  background-image: url(fields.jpg);
   font-family:Georgia;
+}
+
+mainHeader {
+  background: no-repeat center bottom scroll; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 150px;
+  padding-top: 2%;
+  font-size: 100%;
 }
 
 h1{
 text-align: center;
-color: rgb(27, 165, 41);
+color: rgb(00, 00, 00);
 }
 
 .compass {
@@ -42,5 +53,5 @@ color: rgb(27, 165, 41);
 
 p{
 text-align: center;
-color: rgb(27, 165, 41);
+color: rgb(00, 00, 00);
 }

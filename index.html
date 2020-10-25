@@ -1,14 +1,42 @@
-<!DOCTYPE html>
 <html>
   <head>
     <title> Text Adventure Game </title>
     <link rel="stylesheet" href="prettyStuff.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+      
+      <script>
+
+      my_function = null;
+      $(document).ready(function(){
+      var header = $('body');
+      
+      var backgrounds = new Array(
+          'url(fields.jpg)'
+        , 'url(forest.png)'
+        , 'url(mountain.jpg)'
+      );
+      
+      var current = 0;
+      
+      function nextBackground(i) {
+          //current++;
+          //current = current % backgrounds.length;
+          header.css('background-image', backgrounds[i]);
+      }
+      //setInterval(nextBackground, 1000);
+      my_function = nextBackground;
+      
+      header.css('background-image', backgrounds[0]);
+      });
+      </script>
   </head>
+  
+  
   <body>
 
     <div class="banner">
     <h1>  Welcome to the Wilderness </h1>
-    <p>  You woke up in the middle of a mysterious forest, your goal is to get out  </p>
+    <p>  You woke up in the middle of a mysterious field, your goal is to get out.  </p>
     <div class="compassholder">
       <button id="north"class="compass"onclick="northButtonClick()">North</button><br>
       <button id="west" class="compass"onclick="westButtonClick()">West</button>
@@ -16,10 +44,10 @@
       <button id="south"class="compass"onclick="southButtonClick()">South</button>
 
     <div class="game">
+
+    <header class="mainHeader"></header>
+    
     </div>
-
-
-
 
 
   </body>
