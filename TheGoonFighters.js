@@ -1,6 +1,6 @@
 
 window.onload = alert("You awaken in a grassy field, ringed by a forest. In the far, far distance, you see mountains. \
-You aren’t sure where you are, or how you got there, but you know you need to get out of the wilderness.");
+You are not sure where you are, or how you got there, but you know you need to get out of the wilderness.");
 
 let countStepVert = 0;
 
@@ -31,8 +31,12 @@ function southButtonClick(){
 function checkBounds() {
 
     if (Math.abs(countStepVert) > 2 || Math.abs(countStepHor) > 2) {
-        alert("You went out of bounds!");
+        alert("You emerge from the field, into a forest.");
+        changeToForest()
         countStepVert = 0;
         countStepHor = 0;
     }
 }
+/*function changeToForest(){
+   prettyStuff.body.style.backgroundImage = 'Forest.jpg';
+}*/
